@@ -18,10 +18,18 @@ for iter = 1:num_iters
     %
 
 
+%     h=theta'*X';
+%     h=h';
+%     err=h-y;
+%     temp0=theta(1)-alpha*1/m*sum(err);
+%     temp1=theta(2)-alpha*1/m*sum(err'*X(:,2));
+%     temp2=theta(3)-alpha*1/m*sum(err'*X(:,3));
+%     
+%     theta(1)=temp0;
+%     theta(2)=temp1;
+%     theta(3)=temp2;
 
-
-
-
+    theta = theta - alpha * (1/m) * (((X*theta) - y)' * X)';
 
 
 

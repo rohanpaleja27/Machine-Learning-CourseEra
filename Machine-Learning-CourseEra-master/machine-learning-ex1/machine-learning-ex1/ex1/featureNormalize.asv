@@ -26,23 +26,19 @@ sigma = zeros(1, size(X, 2));
 % Hint: You might find the 'mean' and 'std' functions useful.
 %       
 
-% mean1=mean(X(:,1));
-% mean2=mean(X(:,2));
-% mu=[mean1 mean2];
-% std1=std((X(:,1)));
-% std2=std((X(:,2)));
-% sigma=[std1 std2];
-% 
-% X1=(X(:,1)-(mean1*ones(length(X(:,1)),1)))./std1;
-% X2=(X(:,2)-(mean2*ones(length(X(:,1)),1)))./std2;
-% 
-% X_norm=[X1 X2];
+mean1=mean(X(:,1));
+mean2=mean(X(:,2));
+mu=[mean1 mean2]
+std1=std((X(:,1)));
+std2=std((X(:,2)));
+sigma=[std1 std2]
 
-mu = mean(X);
-sigma = std(X);
+X(1)=(X(:,1)-mean1*ones()./std1;
+X(2)=(X(:,2)-mean2)./std2;
 
-t = ones(length(X), 1);
-X_norm = (X - (t * mu)) ./ (t * sigma); % Vectorized
+X_norm=[X(:,1) X(:,2)];
+
+
 
 % ============================================================
 
